@@ -7,15 +7,34 @@ export default function Header(props) {
 		<header className="ls_ui-header">
 			{props.logoDark && props.logoLight ?
 				<div className="ls_ui-logo">
-					<Image className="ls_ui-logo-dark" src={props.logoDark} width={144} height={26} alt="Logo (Dark)" />
-					<Image className="ls_ui-logo-light" src={props.logoLight} width={144} height={26} alt="Logo (Light)" />
+					<Image
+						alt="Logo (Dark)"
+						className="ls_ui-logo-dark"
+						height={26}
+						src={props.logoDark}
+						width={144}
+					/>
+
+					<Image
+						alt="Logo (Light)"
+						className="ls_ui-logo-light"
+						height={26}
+						src={props.logoLight}
+						width={144}
+					/>
 				</div>
 
 			:
-				<Logo text="Layered Stack UI" />
+				<Logo
+					metadata={props.metadata}
+					text={props.metadata.name}
+				/>
 			}
 
-			<UserMenu />
+			<UserMenu
+				mobileMenuIcon={props.mobileMenuIcon}
+				user={props.user}
+			/>
 		</header>
 	)
 }

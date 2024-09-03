@@ -1,7 +1,7 @@
 export { default as Header } from './components/Header'
 export { default as Logo } from './components/Logo'
 export { default as Menu } from './components/Menu'
-export { default as MobileMenuSwitcher } from './components/MobileMenuSwitcher'
+export { default as MobileMenuIcon } from './components/MobileMenuIcon'
 export { default as Page } from './components/Page'
 export { default as RoundedIcon } from './components/RoundedIcon'
 export { default as SquaredIcon } from './components/SquaredIcon'

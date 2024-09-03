@@ -8,6 +8,9 @@ export default function Page({ children, ...props }) {
       <Header
         logoDark={props.logoDark}
         logoLight={props.logoLight}
+        metadata={props.metadata}
+        mobileMenuIcon={props.mobileMenuIcon}
+        user={props.user}
       />
 
       <div className="ls_ui-page">

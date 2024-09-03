@@ -1,13 +1,20 @@
 import Menu from './Menu'
-import MobileMenuSwitcher from './MobileMenuSwitcher'
 import RoundedIcon from './RoundedIcon'
+import MobileMenuIcon from './MobileMenuIcon'
 
-export default function UserMenu() {
+export default function UserMenu(props) {
 	return (
     <div className="ls_ui-user_menu">
       <Menu />
-      <RoundedIcon text="TG" />
-      <MobileMenuSwitcher />
+
+      <RoundedIcon
+        className="ls_ui-user_icon"
+        text={props.user.initials}
+      />
+
+      <MobileMenuIcon
+        mobileMenuIcon={props.mobileMenuIcon}
+      />
     </div>
   )
 }

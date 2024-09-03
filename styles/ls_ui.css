@@ -117,13 +117,17 @@
   transition: color 0.2s ease;
 }
 
-.ls_ui-user_menu .ls_ui-rounded_icon {
+/* User Icon */
+
+.ls_ui-user_icon{
   @apply
     hidden
     md:flex;
 }
 
-.ls_ui-mobile_menu_switcher {
+/* Mobile Menu Icon */
+
+.ls_ui-mobile_menu_icon {
   @apply
     cursor-pointer
     flex
