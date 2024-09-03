@@ -1,8 +1,8 @@
 {
   "name": "@layeredstack/ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "UI components for Layered Stack",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx babel src --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
