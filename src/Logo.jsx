@@ -1,3 +1,5 @@
+import React from 'react'
+
 import SquaredIcon from './SquaredIcon'
 
 export default function Logo(props) {

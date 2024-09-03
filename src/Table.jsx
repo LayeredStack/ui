@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Table(props) {
   return (
     <table className={`ls_ui-table ${props.className}`}>

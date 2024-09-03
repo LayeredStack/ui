@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Menu from './Menu'
 import RoundedIcon from './RoundedIcon'
 import MobileMenuIcon from './MobileMenuIcon'
