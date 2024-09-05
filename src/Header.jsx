@@ -25,7 +25,6 @@ export default function Header(props) {
 						width={144}
 					/>
 				</div>
-
 			:
 				<Logo
 					metadata={props.metadata}

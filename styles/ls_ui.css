@@ -121,8 +121,10 @@
 
 .ls_ui-user_icon{
   @apply
+    bg-black
     hidden
-    md:flex;
+    md:flex
+    dark:bg-white;
 }
 
 /* Mobile Menu Icon */
