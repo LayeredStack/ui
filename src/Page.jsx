@@ -1,10 +1,31 @@
-import React from 'react'
+'use client'
 
+// React
+import React, { useState, useEffect } from 'react'
+
+// Components
 import Header from './Header'
-import Menu from './Menu'
-import ThemeSwitcher from './ThemeSwitcher'
+import MobileMenu from './MobileMenu'
+import Navigation from './Navigation'
 
 export default function Page({ children, ...props }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobileMenuOpen(false)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prevState => !prevState)
+  }
+
 	return (
     <main>
       <Header
@@ -12,19 +33,19 @@ export default function Page({ children, ...props }) {
         logoLight={props.logoLight}
         metadata={props.metadata}
         mobileMenuIcon={props.mobileMenuIcon}
+        mobileMenuOpen={mobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
         user={props.user}
+      />
+
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        useTheme={props.useTheme}
       />
 
       <div className="ls_ui-page">
         <aside className="ls_ui-navigation">
-          <div>
-            <h1>Menu</h1>
-            <Menu />
-          </div>
-
-          <ThemeSwitcher
-            useTheme={props.useTheme}
-          />
+          <Navigation useTheme={props.useTheme} />
         </aside>
 
         <div className="ls_ui-content">

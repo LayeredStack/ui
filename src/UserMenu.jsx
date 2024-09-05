@@ -16,6 +16,8 @@ export default function UserMenu(props) {
 
       <MobileMenuIcon
         mobileMenuIcon={props.mobileMenuIcon}
+        mobileMenuOpen={props.mobileMenuOpen}
+        toggleMobileMenu={props.toggleMobileMenu}
       />
     </div>
   )

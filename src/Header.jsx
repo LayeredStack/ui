@@ -34,6 +34,8 @@ export default function Header(props) {
 
 			<UserMenu
 				mobileMenuIcon={props.mobileMenuIcon}
+				mobileMenuOpen={props.mobileMenuOpen}
+				toggleMobileMenu={props.toggleMobileMenu}
 				user={props.user}
 			/>
 		</header>
