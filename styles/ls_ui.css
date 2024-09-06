@@ -183,7 +183,6 @@
     start-0
     text-black
     top-14
-    z-50
     dark:bg-neutral-900
     dark:text-white;
   transition: opacity 0.5s ease-in-out;
@@ -191,7 +190,8 @@
 
 .ls_ui-mobile-menu.open {
   @apply
-    opacity-100;
+    opacity-100
+    z-10;
 }
 
 .ls_ui-mobile-menu h1 {
@@ -341,4 +341,21 @@
     leading-6
     mt-3
     text-sm
+}
+
+.ls_ui-content section {
+  @apply
+    mt-6;
+}
+
+.ls_ui-not-connected {
+  @apply
+    text-red-500
+    dark:text-red-400;
+}
+
+.ls_ui-connected {
+  @apply
+    text-green-500
+    dark:text-green-400;
 }

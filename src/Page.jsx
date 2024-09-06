@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react'
 
 // Components
+import Backend from './Backend'
 import Header from './Header'
 import MobileMenu from './MobileMenu'
 import Navigation from './Navigation'
@@ -51,6 +52,12 @@ export default function Page({ children, ...props }) {
         <div className="ls_ui-content">
           <div className="ls_ui-content_container">
             {children}
+
+            {props.backendUrl !== undefined &&
+              <section>
+                <Backend url={props.backendUrl} />
+              </section>
+            }
           </div>
         </div>
       </div>
